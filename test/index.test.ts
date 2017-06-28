@@ -2,7 +2,6 @@ import assert = require('assert')
 import { Result, IResult } from '../src'
 
 
-
 function testFunction(r: IResult<string>) {
   if (r.ok) {
     assert.equal('hello', r.data)
@@ -12,10 +11,8 @@ function testFunction(r: IResult<string>) {
 }
 
 
-
-
-
 suite('index', () => {})
+
 
 test('index', () => {
   const a = Result.OK('hello')

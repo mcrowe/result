@@ -26,6 +26,15 @@ export const Result = {
     } catch (e) {
       return Result.Error(e.message)
     }
+  },
+
+  async promise<T>(fn: () => Promise<T>): Promise<IResult<T>> {
+    try {
+      const res = await fn()
+      return Result.OK(res)
+    } catch (e) {
+      return Result.Error(e.message)
+    }
   }
 
 }
