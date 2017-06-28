@@ -18,6 +18,14 @@ export const Result = {
 
   Error(error: string): IError {
     return { ok: false, error }
+  },
+
+  of<T>(fn: () => T): IResult<T> {
+    try {
+      return Result.OK( fn() )
+    } catch (e) {
+      return Result.Error(e.message)
+    }
   }
 
 }
