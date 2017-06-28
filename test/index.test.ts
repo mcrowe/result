@@ -1,10 +1,24 @@
 import assert = require('assert')
-import doSomething from '../src'
+import { Result, IResult } from '../src'
 
 
 suite('index', () => {})
 
 
 test('index', () => {
-  assert.equal(5, doSomething(1))
+  const a = Result.OK('hello')
+  assert.equal(true, a.ok)
+
+  const b = Result.Error('my error')
+  assert.equal(false, b.ok)
+
+  function testFunction(r: IResult<string>) {
+    if (r.ok) {
+      assert.equal('hello', r.data)
+    } else {
+      assert(false)
+    }
+  }
+
+  testFunction(a)
 })
