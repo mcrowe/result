@@ -1,6 +1,6 @@
 {
   "name": "@mcrowe/result",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Typesafe results for Typescript",
   "author": "Mitch Crowe <code@mitchcrowe.com> (http://www.mitchcrowe.com)",
   "license": "ISC",
