@@ -1,10 +1,10 @@
-# package_name
+# result
 
-package_description
+Typesafe results for Typescript
 
 ## Usage
 
-> npm install @mcrowe/package_name --save
+> npm install @mcrowe/result --save
 
 ## Development
 
